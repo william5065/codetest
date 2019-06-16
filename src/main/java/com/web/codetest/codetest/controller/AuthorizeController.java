@@ -11,7 +11,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
 @Controller
@@ -37,7 +39,8 @@ public class AuthorizeController {
     @GetMapping("/callback")
     public String callback(@RequestParam(name="code") String code,
                            @RequestParam(name="state") String state,
-                           HttpServletRequest request){
+                           HttpServletRequest request,
+                           HttpServletResponse response){
 
         AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
         accessTokenDTO.setClient_id(client_id);
@@ -57,11 +60,31 @@ public class AuthorizeController {
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
             userMapper.insert(user);
-            request.getSession().setAttribute("user",githubUser);
+            //手动添加cookie
+
+            Cookie cookie = new Cookie("accessToken",user.getToken());
+            response.addCookie(cookie);
+
+            //可以直接用下面一句设置session，就可以一把cookie也写进去
+//            request.getSession().setAttribute("user",githubUser);
 
             System.out.println(githubUser);
 
         }
         return "redirect:/";
+    }
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request){
+        String token = (String) request.getSession().getAttribute("accessToken");
+        userMapper.deleteToken(token);
+
+//        request.getSession()
+//
+//
+//        .removeAttribute("accessToken");
+
+
+        return "redirect:/";
+
     }
 }

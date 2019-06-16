@@ -134,8 +134,9 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
             <!--<a th:text="${session.user.name}" class="dropdown-item active" href="/docs/4.3/"></a>-->
-            <a class="dropdown-item" href="https://getbootstrap.com/docs/4.2/">v4.2.1</a>
-            <a class="dropdown-item" href="https://getbootstrap.com/docs/4.0/">v4.0.0</a>
+            <a class="dropdown-item" href="https://getbootstrap.com/docs/4.2/">个人中心</a>
+
+            <a class="dropdown-item" th:href="@{/logout}">退出登录</a>
             <!--<div class="dropdown-divider"></div>-->
             <!--<a class="dropdown-item" href="https://v4-alpha.getbootstrap.com/">v4 Alpha 6</a>-->
             <!--<a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a>-->
@@ -147,83 +148,132 @@
     </div>
 
 </header>
+<!--<main class="bd-masthead" id="content" role="main">-->
+    <!--<div class="container" style="margin-top: 20px">-->
+    <!--</div>-->
+<!--</main>-->
+<div style="margin-top: 20px;"></div>
+<!--<div class="view">-->
+    <!--<div class="jumbotron" contenteditable="true">-->
+        <!--<h1>Hello, world!</h1>-->
+        <!--<p>-->
+            <!--This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--<a class="btn btn-primary btn-large" href="#">Learn more</a>-->
+        <!--</p>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<main class="bd-masthead" id="content" role="main">-->
+    <!--<div class="container">-->
+        <!--<div class="row align-items-center">-->
+            <!--<div class="col-6 mx-auto col-md-6 order-md-2">-->
+                <!--<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="430" class="img-fluid mb-3 mb-md-0" role="img" viewBox="0 0 1024 860" focusable="false"><title>Bootstrap</title><defs><linearGradient id="c" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#5C24AE"></stop><stop offset="100%" stop-color="#30135A"></stop></linearGradient><path id="b" d="M355.967 242.807l-322 216.395c-44.275 29.754-44.275 78.443 0 108.197l322 216.395c44.275 29.754 116.725 29.754 161 0l322-216.395c44.275-29.754 44.275-78.443 0-108.197l-322-216.395c-44.275-29.754-116.725-29.754-161 0z"></path><filter id="a" width="108%" height="112%" x="-4%" y="-4.3%" filterUnits="objectBoundingBox"><feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"></feGaussianBlur><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix></filter><linearGradient id="f" x1="50%" x2="50%" y1="-17.303%" y2="100%"><stop offset="0%" stop-color="#7331D4"></stop><stop offset="100%" stop-color="#461B84"></stop></linearGradient><path id="e" d="M355.967 132.807l-322 216.395c-44.275 29.754-44.275 78.443 0 108.197l322 216.395c44.275 29.754 116.725 29.754 161 0l322-216.395c44.275-29.754 44.275-78.443 0-108.197l-322-216.395c-44.275-29.754-116.725-29.754-161 0z"></path><filter id="d" width="108%" height="112%" x="-4%" y="-4.3%" filterUnits="objectBoundingBox"><feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"></feGaussianBlur><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix></filter><linearGradient id="i" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#905BDD"></stop><stop offset="100%" stop-color="#5521A0"></stop></linearGradient><path id="h" d="M355.967 22.807l-322 216.395c-44.275 29.754-44.275 78.443 0 108.197l322 216.395c44.275 29.754 116.725 29.754 161 0l322-216.395c44.275-29.754 44.275-78.443 0-108.197l-322-216.395c-44.275-29.754-116.725-29.754-161 0z"></path><filter id="g" width="108%" height="112%" x="-4%" y="-4.3%" filterUnits="objectBoundingBox"><feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"></feGaussianBlur><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix></filter></defs><g fill="none"><g transform="translate(75 23)"><use fill="#000" filter="url(#a)" xlink:href="#b"></use><use fill="url(#c)" xlink:href="#b"></use></g><g transform="translate(75 23)"><use fill="#000" filter="url(#d)" xlink:href="#e"></use><use fill="url(#f)" xlink:href="#e"></use></g><g transform="translate(75 23)"><use fill="#000" filter="url(#g)" xlink:href="#h"></use><use fill="url(#i)" xlink:href="#h"></use></g><path fill="#FFF" d="M558.273 447.667L308.036 279.5l97.982-65.847c42.83-28.784 96.789-31.483 134.245-6.311 26.044 17.502 31.214 46.615 11.444 65.724l1.389.934c38.324-19.932 84.107-18.527 117.396 3.845 44.046 29.6 38.671 68.419-14.561 104.193l-97.658 65.629zM447.112 331.01l49.942-33.562c36.935-24.822 42.31-48.249 15.224-66.451-24.798-16.665-55.49-14.453-85.851 5.95l-59.641 40.081 80.326 53.982zm176.532 35.663c37.63-25.289 42.136-48.832 13.203-68.276-28.932-19.444-64.163-15.614-104.042 11.186l-58.789 39.508 87.92 59.084 61.708-41.502z"></path></g></svg>-->
+            <!--</div>-->
+            <!--<div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">-->
+                <!--<h1 class="mb-3 bd-text-purple-bright">Bootstrap</h1>-->
+                <!--<p class="lead">-->
+                    <!--Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.-->
+                <!--</p>-->
+                <!--<p class="lead mb-4">-->
+                    <!--Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.-->
+                <!--</p>-->
+                <!--<div class="row mx-n2">-->
+                    <!--<div class="col-md px-2">-->
+                        <!--<a href="/docs/4.3/getting-started/introduction/" class="btn btn-lg btn-bd-primary w-100 mb-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">Get started</a>-->
+                    <!--</div>-->
+                    <!--<div class="col-md px-2">-->
+                        <!--<a href="/docs/4.3/getting-started/download/" class="btn btn-lg btn-outline-secondary w-100 mb-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download 4.3.1');">Download</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<p class="text-muted mb-0">-->
+                    <!--Currently v4.3.1-->
+                <!--</p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<script async="" src="https://cdn.carbonads.com/carbon.js?serve=CKYIKKJL&amp;placement=getbootstrapcom" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42QNCTBILKQNCT7LYKQMCYYDK27LCEAI5Z3JCWSDT2J7CAYIT23KC6BIKK3MF67DEK3EHJNCLSIZ?segment=placement:getbootstrapcom;" class="carbon-img" target="_blank" rel="noopener"><img src="https://cdn4.buysellads.net/uu/1/3386/1525189943-38523.png" alt="ads via Carbon" border="0" height="100" width="130" style="max-width: 130px;"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42QNCTBILKQNCT7LYKQMCYYDK27LCEAI5Z3JCWSDT2J7CAYIT23KC6BIKK3MF67DEK3EHJNCLSIZ?segment=placement:getbootstrapcom;" class="carbon-text" target="_blank" rel="noopener">Limited time offer: Get 10 free Adobe Stock images.</a></span><a href="http://carbonads.net/?utm_source=getbootstrapcom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener">ads via Carbon</a></span></div>-->
+
+    <!--</div>-->
+<!--</main>-->
 
 
-<main class="bd-masthead" id="content" role="main">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-6 mx-auto col-md-6 order-md-2">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="430" class="img-fluid mb-3 mb-md-0" role="img" viewBox="0 0 1024 860" focusable="false"><title>Bootstrap</title><defs><linearGradient id="c" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#5C24AE"></stop><stop offset="100%" stop-color="#30135A"></stop></linearGradient><path id="b" d="M355.967 242.807l-322 216.395c-44.275 29.754-44.275 78.443 0 108.197l322 216.395c44.275 29.754 116.725 29.754 161 0l322-216.395c44.275-29.754 44.275-78.443 0-108.197l-322-216.395c-44.275-29.754-116.725-29.754-161 0z"></path><filter id="a" width="108%" height="112%" x="-4%" y="-4.3%" filterUnits="objectBoundingBox"><feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"></feGaussianBlur><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix></filter><linearGradient id="f" x1="50%" x2="50%" y1="-17.303%" y2="100%"><stop offset="0%" stop-color="#7331D4"></stop><stop offset="100%" stop-color="#461B84"></stop></linearGradient><path id="e" d="M355.967 132.807l-322 216.395c-44.275 29.754-44.275 78.443 0 108.197l322 216.395c44.275 29.754 116.725 29.754 161 0l322-216.395c44.275-29.754 44.275-78.443 0-108.197l-322-216.395c-44.275-29.754-116.725-29.754-161 0z"></path><filter id="d" width="108%" height="112%" x="-4%" y="-4.3%" filterUnits="objectBoundingBox"><feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"></feGaussianBlur><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix></filter><linearGradient id="i" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#905BDD"></stop><stop offset="100%" stop-color="#5521A0"></stop></linearGradient><path id="h" d="M355.967 22.807l-322 216.395c-44.275 29.754-44.275 78.443 0 108.197l322 216.395c44.275 29.754 116.725 29.754 161 0l322-216.395c44.275-29.754 44.275-78.443 0-108.197l-322-216.395c-44.275-29.754-116.725-29.754-161 0z"></path><filter id="g" width="108%" height="112%" x="-4%" y="-4.3%" filterUnits="objectBoundingBox"><feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"></feGaussianBlur><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix></filter></defs><g fill="none"><g transform="translate(75 23)"><use fill="#000" filter="url(#a)" xlink:href="#b"></use><use fill="url(#c)" xlink:href="#b"></use></g><g transform="translate(75 23)"><use fill="#000" filter="url(#d)" xlink:href="#e"></use><use fill="url(#f)" xlink:href="#e"></use></g><g transform="translate(75 23)"><use fill="#000" filter="url(#g)" xlink:href="#h"></use><use fill="url(#i)" xlink:href="#h"></use></g><path fill="#FFF" d="M558.273 447.667L308.036 279.5l97.982-65.847c42.83-28.784 96.789-31.483 134.245-6.311 26.044 17.502 31.214 46.615 11.444 65.724l1.389.934c38.324-19.932 84.107-18.527 117.396 3.845 44.046 29.6 38.671 68.419-14.561 104.193l-97.658 65.629zM447.112 331.01l49.942-33.562c36.935-24.822 42.31-48.249 15.224-66.451-24.798-16.665-55.49-14.453-85.851 5.95l-59.641 40.081 80.326 53.982zm176.532 35.663c37.63-25.289 42.136-48.832 13.203-68.276-28.932-19.444-64.163-15.614-104.042 11.186l-58.789 39.508 87.92 59.084 61.708-41.502z"></path></g></svg>
-            </div>
-            <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
-                <h1 class="mb-3 bd-text-purple-bright">Bootstrap</h1>
-                <p class="lead">
-                    Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.
-                </p>
-                <p class="lead mb-4">
-                    Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.
-                </p>
-                <div class="row mx-n2">
-                    <div class="col-md px-2">
-                        <a href="/docs/4.3/getting-started/introduction/" class="btn btn-lg btn-bd-primary w-100 mb-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">Get started</a>
-                    </div>
-                    <div class="col-md px-2">
-                        <a href="/docs/4.3/getting-started/download/" class="btn btn-lg btn-outline-secondary w-100 mb-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download 4.3.1');">Download</a>
-                    </div>
-                </div>
-                <p class="text-muted mb-0">
-                    Currently v4.3.1
-                </p>
-            </div>
-        </div>
-        <script async="" src="https://cdn.carbonads.com/carbon.js?serve=CKYIKKJL&amp;placement=getbootstrapcom" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42QNCTBILKQNCT7LYKQMCYYDK27LCEAI5Z3JCWSDT2J7CAYIT23KC6BIKK3MF67DEK3EHJNCLSIZ?segment=placement:getbootstrapcom;" class="carbon-img" target="_blank" rel="noopener"><img src="https://cdn4.buysellads.net/uu/1/3386/1525189943-38523.png" alt="ads via Carbon" border="0" height="100" width="130" style="max-width: 130px;"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42QNCTBILKQNCT7LYKQMCYYDK27LCEAI5Z3JCWSDT2J7CAYIT23KC6BIKK3MF67DEK3EHJNCLSIZ?segment=placement:getbootstrapcom;" class="carbon-text" target="_blank" rel="noopener">Limited time offer: Get 10 free Adobe Stock images.</a></span><a href="http://carbonads.net/?utm_source=getbootstrapcom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener">ads via Carbon</a></span></div>
-
-    </div>
-</main>
 
 <div class="masthead-followup row m-0 border border-white">
-    <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+    <!--<div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">-->
+    <div class="col-12 col-md-4 p-3 p-md-5 bg-light">
+        <div class="card">
+            <img th:src="@{images/fiddler.jpg}" class="card-img-top" alt="..." />
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
         <!-- Icon by Bytesize https://github.com/danklammer/bytesize-icons -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="text-primary mb-2" viewBox="0 0 32 32" focusable="false"><title>Import</title><path d="M28 22v8H4v-8M16 4v20m-8-8l8 8 8-8"></path></svg>
-        <h3>Installation</h3>
-        <p>Include Bootstrap’s source Sass and JavaScript files via npm, Composer or Meteor. Package managed installs don’t include documentation, but do include our build system and readme.</p>
+        <!--<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="text-primary mb-2" viewBox="0 0 32 32" focusable="false"><title>Import</title><path d="M28 22v8H4v-8M16 4v20m-8-8l8 8 8-8"></path></svg>-->
+        <!--<h3>Installation</h3>-->
+        <!--<p>Include Bootstrap’s source Sass and JavaScript files via npm, Composer or Meteor. Package managed installs don’t include documentation, but do include our build system and readme.</p>-->
 
-        <div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-sh" data-lang="sh">npm <span class="nb">install </span>bootstrap</code></pre></figure>
+        <!--<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-sh" data-lang="sh">npm <span class="nb">install </span>bootstrap</code></pre></figure>-->
 
-        <div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-sh" data-lang="sh">gem <span class="nb">install </span>bootstrap <span class="nt">-v</span> 4.3.1</code></pre></figure>
+        <!--<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-sh" data-lang="sh">gem <span class="nb">install </span>bootstrap <span class="nt">-v</span> 4.3.1</code></pre></figure>-->
 
-        <hr class="half-rule">
-        <a class="btn btn-outline-primary" href="/docs/4.3/getting-started/download/">Read installation docs</a>
+        <!--<hr class="half-rule">-->
+        <!--<a class="btn btn-outline-primary" href="/docs/4.3/getting-started/download/">Read installation docs</a>-->
     </div>
 
-    <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+    <div class="col-12 col-md-4 p-3 p-md-5 bg-light">
+        <div class="card">
+            <img src="https://gridgum.com/images/themes/715-thumb.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
         <!-- Icon by Bytesize https://github.com/danklammer/bytesize-icons -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="text-primary mb-2" viewBox="0 0 32 32" focusable="false"><title>Download</title><path d="M9 22c-9 1-8-10 0-9C6 2 23 2 22 10c10-3 10 13 1 12m-12 4l5 4 5-4m-5-10v14"></path></svg>
-        <h3>BootstrapCDN</h3>
-        <p>When you only need to include Bootstrap’s compiled CSS or JS, you can use <a href="https://www.bootstrapcdn.com/">BootstrapCDN</a>.</p>
+        <!--<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="text-primary mb-2" viewBox="0 0 32 32" focusable="false"><title>Download</title><path d="M9 22c-9 1-8-10 0-9C6 2 23 2 22 10c10-3 10 13 1 12m-12 4l5 4 5-4m-5-10v14"></path></svg>-->
+        <!--<h3>BootstrapCDN</h3>-->
+        <!--<p>When you only need to include Bootstrap’s compiled CSS or JS, you can use <a href="https://www.bootstrapcdn.com/">BootstrapCDN</a>.</p>-->
 
-        <h5>CSS only</h5>
-        <div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre></figure>
+        <!--<h5>CSS only</h5>-->
+        <!--<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre></figure>-->
 
-        <h5>JS, Popper.js, and jQuery</h5>
-        <div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
-        <hr class="half-rule">
-        <a class="btn btn-outline-primary" href="/docs/4.3/layout/overview/">Explore the docs</a>
+        <!--<h5>JS, Popper.js, and jQuery</h5>-->
+        <!--<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>-->
+<!--<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>-->
+<!--<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>-->
+        <!--<hr class="half-rule">-->
+        <!--<a class="btn btn-outline-primary" href="/docs/4.3/layout/overview/">Explore the docs</a>-->
     </div>
 
-    <div class="col-12 col-md-4 p-3 p-md-5 bg-light border border-white">
+    <div class="col-12 col-md-4 p-3 p-md-5 bg-light">
+
+        <div class="card">
+            <img src="https://gridgum.com/images/themes/715-thumb.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
         <!-- Icon by Bytesize https://github.com/danklammer/bytesize-icons -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="text-primary mb-2" viewBox="0 0 32 32" focusable="false"><title>Lightning</title><path d="M18 13l8-11L8 13l6 6-8 11 18-11z"></path></svg>
-        <h3>Official Themes</h3>
-        <p>
-            Take Bootstrap 4 to the next level with official premium themes—toolkits built on Bootstrap with new components and plugins, docs, and build tools.
-        </p>
-        <img class="img-fluid mt-3 mx-auto" srcset="/docs/4.3/assets/img/bootstrap-themes.png,
-                                                /docs/4.3/assets/img/bootstrap-themes@2x.png 2x" src="/docs/4.3/assets/img/bootstrap-themes.png" alt="Bootstrap Themes" width="500" height="200">
-        <hr class="half-rule">
-        <a href="https://themes.getbootstrap.com/" class="btn btn-outline-primary">Browse themes</a>
+        <!--<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="text-primary mb-2" viewBox="0 0 32 32" focusable="false"><title>Lightning</title><path d="M18 13l8-11L8 13l6 6-8 11 18-11z"></path></svg>-->
+        <!--<h3>Official Themes</h3>-->
+        <!--<p>-->
+            <!--Take Bootstrap 4 to the next level with official premium themes—toolkits built on Bootstrap with new components and plugins, docs, and build tools.-->
+        <!--</p>-->
+        <!--<img class="img-fluid mt-3 mx-auto" srcset="/docs/4.3/assets/img/bootstrap-themes.png,-->
+                                                <!--/docs/4.3/assets/img/bootstrap-themes@2x.png 2x" src="/docs/4.3/assets/img/bootstrap-themes.png" alt="Bootstrap Themes" width="500" height="200">-->
+        <!--<hr class="half-rule">-->
+        <!--<a href="https://themes.getbootstrap.com/" class="btn btn-outline-primary">Browse themes</a>-->
     </div>
 </div>
 
