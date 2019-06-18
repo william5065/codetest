@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.UUID;
 
 @Controller
@@ -75,8 +76,16 @@ public class AuthorizeController {
     }
     @GetMapping("/logout")
     public String logout(HttpServletRequest request){
-        String token = (String) request.getSession().getAttribute("accessToken");
-        userMapper.deleteToken(token);
+
+        HttpSession session = request.getSession();//获取当前session
+        if(session!=null){
+            String token =(String) session.getAttribute("accessToken");
+            System.out.println("token:"+token);
+            userMapper.deleteToken(token);
+//            User user = (User)session.getAttribute("yh");//从当前session中获取用户信息
+            session.invalidate();//关闭session
+        }
+
 
 //        request.getSession()
 //
